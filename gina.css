@@ -1,0 +1,356 @@
+*{
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+body{
+    font-family: 'Amiri', serif;
+    background: #F2F6F5;
+    overflow-x: hidden;
+}
+
+li{
+    list-style: none;
+    
+}
+a{
+    text-decoration: none;
+    
+}
+a:hover{
+    color: #085F63;
+}
+h1{
+    font-weight: 500;
+}
+
+h3{
+    color: #32DBC6;
+}
+
+h4, h5{
+    text-transform: uppercase;
+}
+
+/* container */
+
+.container-flex{
+    display: grid;
+    grid-template-areas: 'header nav nav-button';
+    width: 100%;
+    margin: 40px;
+    text-transform: uppercase; 
+    position: sticky; 
+}
+
+/* Title */
+
+.header{
+    grid-area: 'header';
+    margin-left: 50px;
+    font-size: 25px;
+    
+}
+
+/* navbar */
+
+.nav-nav{
+   grid: 'nav';
+   margin-right: -250px;
+}
+
+.nav-nav-list ul{
+    width: 100%;
+    height: 65px;
+    display: flex;
+    
+}
+
+.nav-item{
+    width: 100px;
+    display: inline-block;
+    /* margin-left: 50px; */
+    font-size: 17px; 
+    
+}
+
+.nav-button{
+    grid-area: 'nav-button';
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    position: absolute;
+    right: 70px;
+    top: -9px;
+    display: none;
+}
+.nav-button .nav-nav-button{
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    outline: 0;
+    border: none;
+    cursor: pointer;
+}
+
+.nav-button .nav-nav-button span{
+    width: 98%;
+    height: 1px;
+    display: block;
+    background-color: blue;
+    margin-top: 9px;
+    margin-bottom: 10px;
+}
+
+
+/* cover photo */
+
+#lt-bulb{
+    max-width: 100%;
+    object-fit: cover;
+    width: 100%;
+    height: 600px;
+}
+
+/* Text Over Image */
+
+.descriptions{
+    position: relative;
+    bottom: 350px;
+    left: 150px;
+    font-size: 40px;
+    color: #085F63;
+}
+
+.descriptions::after{
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0, #fff 100%);
+    margin-top: -150px;
+    height: 150px;
+    width: 100%;
+}
+
+/* Work Description */
+
+    .work-des, .work-solu-opp{
+        text-align: center;
+        font-size: 24px;
+        line-height: 1.5;
+        padding: 20px;
+        margin-top: 100px;
+    }
+
+    #line-break{
+        border-bottom: 2px solid rgba(114, 22, 34, 0.87);
+        width: 200px;
+        margin-top: 30px;
+    }
+
+    .work-solu-opp{
+        margin-bottom: 40px;
+    }
+
+
+    /* Expertise Section */
+    
+        .expertise{
+            line-height: 3;
+            margin-top: 75px;
+            padding: 50px;
+            color: #32DBC6;
+            font-size: 25px;
+            
+        }
+    
+        .fas{ 
+           font-size: 35px;
+           margin-left: 100px;
+           color: #007373;
+        }
+
+        .pt-one{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            padding-bottom: 50px; 
+          
+        }
+        .pt-two{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+
+    .fa-brain{
+        margin-left: 70px;
+    }
+     .fa-seedling{
+         margin-left: 170px;
+     } 
+     .fa-low-vision{
+         margin-left: 125px;
+     }  
+
+     /* Experience  */
+
+     .header-exp{
+        font-size: 35px;
+        color: #085F63;
+        font-weight: 700;
+        margin: 200px 0 0 600px;
+        }
+
+        /* sub-head  */
+
+     .experience{
+        display: grid;
+        grid-template-columns:(3,1fr);
+        
+        grid-template-areas: 'left center right';
+        
+        
+        grid-gap: 10px;
+        margin: 20px;
+        padding: 40px 150px 50px 150px;
+        font-size: 18px;
+        line-height: 2;
+     }
+
+     .job-one{
+        grid-area: left;
+        position: relative;
+        right: 50px;
+        padding: 10px;
+        
+     }
+
+     .job-two{
+        grid-area: center;
+        position: relative;
+        left: 20px;
+     }
+
+     .job-three{
+        grid-area: right;
+        position: relative;
+        left: 120px;
+        
+     }
+
+
+     /* testimonials */
+
+        .testimonials{
+         text-align: center;
+         font-family: 'Cormorant Infant', serif;
+         margin-top: 250px;
+         font-size: 20px;
+         font-weight: 600;
+         line-height: 2;
+         width: 60%;
+         overflow: hidden;
+         box-sizing: border-box;
+         /* color: #262626; */
+     }
+
+     .quote-credit{
+        width: 30%;
+        text-align: center;
+        color: #262626;
+        padding: 40px;
+    }
+
+     /* used to move carousel items */
+     .carousel-items{
+         transform-style: preserve-3d; 
+     }
+
+
+
+     .reco-quote.prev,
+     .reco-quote.next {
+         z-index: 800;
+     }
+
+     .reco-quote.prev{
+         transform: translateX(-100%);  /* move "prev" item to left */
+         
+     }
+     .reco-quote.next{
+         transform: translateX(100%); /* move "prev" item to right */
+     }
+
+     .carousel-button-back--prev,
+     .carousel-button-forward--next{
+         position: absolute;
+         top: 340%;
+         width: 3rem;
+         height: 3rem;
+         transform: translateY(-50%);
+         cursor: pointer;
+         z-index: 1001;
+         
+         
+     }
+
+     .carousel-button-back--prev{
+         left: 10%;
+        
+     }
+
+    .carousel-button-forward--next{
+         right: 10%;
+     }
+
+    .carousel-button-back--prev::after,
+    .carousel-button-forward--next::after{
+         content: " ";
+         position: absolute;
+         width: 10px;
+         height: 10px;
+         left: 54%;
+         border-right: 2px solid blue;
+         transform: translate(-50%) rotate(135deg);
+     }
+
+
+     .carousel-button-forward--next::after{
+         left: 47%;
+         transform: translate(-50%) rotate(45deg);
+     }
+
+
+     .footer{
+        background-color: rgba(114, 22, 34, 0.87);
+        text-align: center;
+        height: 3em;
+        padding-top: 1em;
+        max-width: 100%;
+     }
+     
+
+/* Media Queries */
+
+
+/* @media screen and (max-width: 768px){
+    .header{
+        position: absolute;
+        left: -50px;
+    }
+     .nav-button{
+        position: relative;
+        right: -40px;
+        display: block;
+        }
+
+    }
+    
+    @media screen and (max-width: 768px){
+        .nav-nav.responsive {position: relative;}
+        .nav-nav.responsive a.nav-nav-button{
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+        .nav-nav.responsive a{
+            float: none;
+            display: block;
+            text-align: left;
+        }
+    } */
